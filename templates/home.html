@@ -1,2 +1,15 @@
 <h1>Home</h1>
 <p>Welcome to the home page!</p>
+
+<ul>
+    {% for item in items %}
+        <li>
+            {{item.name}} -
+            {% if item.completed %}
+                Completed
+            {% else %}
+                In Progress
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
