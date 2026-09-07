@@ -1,15 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
 <h1>Home</h1>
-<p>Welcome to the home page!</p>
+<p>Welcome to my home page!</p>
 
 <ul>
     {% for item in items %}
-        <li>
-            {{item.name}} -
-            {% if item.completed %}
-                Completed
-            {% else %}
-                In Progress
-            {% endif %}
+        <li>{{ item.name }} -
+        {% if item.completed %}
+            Completed
+        {% else %}
+            In Progress
+        {% endif %}
         </li>
     {% endfor %}
 </ul>
+
+{% endblock %}
